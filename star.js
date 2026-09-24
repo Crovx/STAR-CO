@@ -86,20 +86,21 @@ class CosmicStar {
     }
 
     geo.computeVertexNormals();
+    geo.attributes.position.needsUpdate = true;
     return geo;
   }
 
   init() {
-    // 1. Malla Principal: Estrella 3D Suave y Redondeada en Cromo Pulido
+    // 1. Malla Principal: Estrella 3D Facetada en Platino Luminoso y Cromo
     const starGeo = this.createRoundedStarGeometry(1.6, 1.8, 3);
     
     this.starMat = new THREE.MeshStandardMaterial({
-      color: 0xd8d8d8,
-      emissive: 0x1a1a1a,
-      emissiveIntensity: 0.4,
-      metalness: 0.92,
-      roughness: 0.18,
-      flatShading: false
+      color: 0xf5f5f5,
+      emissive: 0x222222,
+      emissiveIntensity: 0.5,
+      metalness: 0.4,
+      roughness: 0.15,
+      flatShading: true
     });
 
     this.starMesh = new THREE.Mesh(starGeo, this.starMat);
@@ -113,10 +114,10 @@ class CosmicStar {
       color: 0xffffff,
       wireframe: true,
       transparent: true,
-      opacity: 0.22
+      opacity: 0.35
     });
     this.wireMesh = new THREE.Mesh(wireGeo, this.wireMat);
-    this.wireMesh.scale.set(1.025, 1.025, 1.025);
+    this.wireMesh.scale.set(1.03, 1.03, 1.03);
     this.group.add(this.wireMesh);
 
     // 3. Núcleo Interno Blanco Puro Apex (Luminous Center Core)
@@ -124,8 +125,8 @@ class CosmicStar {
     this.coreMat = new THREE.MeshStandardMaterial({
       color: 0xffffff,
       emissive: 0xffffff,
-      emissiveIntensity: 0.8,
-      metalness: 0.5,
+      emissiveIntensity: 0.9,
+      metalness: 0.2,
       roughness: 0.1
     });
     this.coreMesh = new THREE.Mesh(coreGeo, this.coreMat);
@@ -136,7 +137,7 @@ class CosmicStar {
     this.glowMat = new THREE.MeshBasicMaterial({
       color: 0xffffff,
       transparent: true,
-      opacity: 0.08,
+      opacity: 0.12,
       wireframe: true,
       blending: THREE.AdditiveBlending
     });
@@ -149,10 +150,14 @@ class CosmicStar {
     // 6. Micro-satélites orbitales en escala de grises
     this.createSatellites();
 
+    // Posición inicial fija en el centro del viewport
+    this.group.position.set(0, 0, 0);
+    this.group.scale.set(1, 1, 1);
+
     // Agregar todo el grupo a la escena
     this.scene.add(this.group);
 
-    // Iniciar con suave animación de llegada
+    // Iniciar animación
     this.startIntroAnimation();
   }
 
@@ -218,10 +223,11 @@ class CosmicStar {
   startIntroAnimation() {
     this.isIntroAnimating = true;
     this.introProgress = 0;
+    this.introDuration = 0.8;
 
-    this.group.position.set(-20, 18, -60);
-    this.group.rotation.set(Math.PI * 3, Math.PI * 2, 0);
-    this.group.scale.set(0.1, 0.1, 0.1);
+    this.group.position.set(0, 0, 0);
+    this.group.rotation.set(0, 0, 0);
+    this.group.scale.set(0.6, 0.6, 0.6);
 
     if (window.cosmicAudio) {
       window.cosmicAudio.playWarp();
@@ -242,8 +248,8 @@ class CosmicStar {
     this.accentColor.set(0x8e9192);
 
     if (this.starMat) {
-      this.starMat.color.set(0xd8d8d8);
-      this.starMat.emissive.set(0x1f1f1f);
+      this.starMat.color.set(0xf5f5f5);
+      this.starMat.emissive.set(0x222222);
     }
   }
 
@@ -260,8 +266,8 @@ class CosmicStar {
     this.hovered = false;
     this.targetScale = 1.0;
     this.spinVelocity.y = 0.014;
-    if (this.starMat) this.starMat.emissiveIntensity = 0.4;
-    if (this.coreMat) this.coreMat.emissiveIntensity = 0.8;
+    if (this.starMat) this.starMat.emissiveIntensity = 0.5;
+    if (this.coreMat) this.coreMat.emissiveIntensity = 0.9;
     document.body.style.cursor = 'default';
   }
 
@@ -290,35 +296,19 @@ class CosmicStar {
   update(deltaTime) {
     this.pulseTime += deltaTime * 2.0;
 
-    // --- ANIMACIÓN DE ENTRADA ---
+    // --- ANIMACIÓN DE ENTRADA SUAVE ---
     if (this.isIntroAnimating) {
       this.introProgress += deltaTime / this.introDuration;
 
       if (this.introProgress >= 1.0) {
         this.introProgress = 1.0;
         this.isIntroAnimating = false;
-        
-        this.group.position.set(0, 0, 0);
         this.group.scale.set(1, 1, 1);
-        this.onClick();
       } else {
         const t = this.introProgress;
-        const ease = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-
-        this.group.position.x = -20 * (1 - ease);
-        this.group.position.y = 18 * (1 - ease);
-        this.group.position.z = -60 * (1 - ease);
-
-        const scaleVal = 0.1 + ease * 0.9;
+        const ease = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        const scaleVal = 0.6 + ease * 0.4;
         this.group.scale.set(scaleVal, scaleVal, scaleVal);
-
-        this.group.rotation.x += deltaTime * 4 * (1 - ease * 0.7);
-        this.group.rotation.y += deltaTime * 5 * (1 - ease * 0.7);
-
-        if (Math.random() < 0.3 && this.particleSystem) {
-          this.particleSystem.triggerSupernova(this.group.position, new THREE.Color(0xffffff));
-        }
-        return;
       }
     }
 

@@ -46,12 +46,16 @@ class Scene3D {
   }
 
   init() {
-    // 1. Escena con niebla suave oscura
+    // 1. Escena con niebla sutil monocromática
     this.scene = new THREE.Scene();
-    this.scene.fog = new THREE.FogExp2(0x131313, 0.015);
+    this.scene.fog = new THREE.FogExp2(0x131313, 0.008);
 
-    // 2. Cámara de perspectiva
+    // 2. Cámara de perspectiva con distancia adaptativa
     const aspect = window.innerWidth / window.innerHeight;
+    this.baseCameraDistance = aspect < 1.0 ? 20 : 15;
+    this.cameraDistance = this.baseCameraDistance;
+    this.targetCameraDistance = this.baseCameraDistance;
+
     this.camera = new THREE.PerspectiveCamera(48, aspect, 0.1, 1000);
     this.camera.position.set(0, 0, this.cameraDistance);
 
@@ -87,24 +91,34 @@ class Scene3D {
   }
 
   setupLights() {
-    // Luz ambiental neutra
-    this.ambientLight = new THREE.AmbientLight(0x222222, 1.6);
-    this.scene.add(this.ambientLight);
+    // 1. Luz hemisférica para iluminación ambiental balanceada
+    this.hemiLight = new THREE.HemisphereLight(0xffffff, 0x181818, 1.6);
+    this.scene.add(this.hemiLight);
 
-    // Luz focal emitida por la estrella (Blanco Apex puro)
-    this.mainLight = new THREE.PointLight(0xffffff, 3.8, 55, 1.2);
+    // 2. Luz direccional frontal-superior principal (Key Light Platino)
+    this.keyLight = new THREE.DirectionalLight(0xffffff, 2.6);
+    this.keyLight.position.set(12, 16, 14);
+    this.scene.add(this.keyLight);
+
+    // 3. Luz direccional lateral de relleno (Fill Light Plata)
+    this.fillLight = new THREE.DirectionalLight(0xd4d4d4, 1.8);
+    this.fillLight.position.set(-14, -8, 12);
+    this.scene.add(this.fillLight);
+
+    // 4. Luz de contorno trasera (Rim / Back Light para silueta 3D)
+    this.backLight = new THREE.DirectionalLight(0xffffff, 2.2);
+    this.backLight.position.set(0, 14, -16);
+    this.scene.add(this.backLight);
+
+    // 5. Luz puntual frontal brillante para iluminar el relieve del objeto central
+    this.frontLight = new THREE.PointLight(0xffffff, 3.5, 45, 1.1);
+    this.frontLight.position.set(0, 1.5, 6);
+    this.scene.add(this.frontLight);
+
+    // 6. Luz puntual interna de destello
+    this.mainLight = new THREE.PointLight(0xffffff, 2.8, 30, 1.0);
     this.mainLight.position.set(0, 0, 0);
     this.scene.add(this.mainLight);
-
-    // Luz de contorno superior (Rim Light Platino)
-    this.rimLight = new THREE.PointLight(0xe8e8e8, 2.5, 65, 1.4);
-    this.rimLight.position.set(16, 14, 12);
-    this.scene.add(this.rimLight);
-
-    // Luz de relleno inferior (Fill Light Gris Acero)
-    this.fillLight = new THREE.PointLight(0xaaaaaa, 2.0, 60, 1.5);
-    this.fillLight.position.set(-16, -14, -10);
-    this.scene.add(this.fillLight);
   }
 
   setupEventListeners() {
@@ -132,7 +146,10 @@ class Scene3D {
 
   onWindowResize() {
     if (!this.camera || !this.renderer) return;
-    this.camera.aspect = window.innerWidth / window.innerHeight;
+    const aspect = window.innerWidth / window.innerHeight;
+    this.camera.aspect = aspect;
+    this.baseCameraDistance = aspect < 1.0 ? 20 : 15;
+    this.targetCameraDistance = this.baseCameraDistance;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));

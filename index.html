@@ -352,8 +352,8 @@
         <div class="absolute bottom-6 left-6 font-mono text-xs text-outline opacity-40 select-none pointer-events-none">+ 02.00 / TORREON</div>
         <div class="absolute bottom-6 right-6 font-mono text-xs text-outline opacity-40 select-none pointer-events-none">+ 03.00 / GRAYSCALE</div>
 
-        <!-- Soft Radial Depth Vignette -->
-        <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_40%,rgba(19,19,19,0.2),rgba(19,19,19,0.85)_80%)]"></div>
+        <!-- Soft Radial Depth Vignette (Luminoso para visualización 3D) -->
+        <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_40%,transparent_0%,rgba(19,19,19,0.3)_60%,rgba(19,19,19,0.75)_100%)]"></div>
         
         <!-- Hero Content Layer -->
         <div class="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center space-y-space-lg pointer-events-auto">
@@ -1442,6 +1442,11 @@
        SCRIPTS: THREE.JS & MÓDULOS 3D
        ========================================== -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+    if (typeof THREE === 'undefined') {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"><\/script>');
+    }
+  </script>
   <script src="js/audio.js"></script>
   <script src="js/particles.js"></script>
   <script src="js/star.js"></script>

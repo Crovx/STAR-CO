@@ -3,16 +3,32 @@
  * Escala de Grises / Monolithic Luxury
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-  // 1. Inicializar la escena 3D si existe el contenedor
+function initStarcoApp() {
+  if (window.starcoAppInitialized) return;
+
+  // 1. Verificar disponibilidad de Three.js
+  if (typeof THREE === 'undefined') {
+    console.warn("Three.js no detectado aún. Reintentando en 100ms...");
+    setTimeout(initStarcoApp, 100);
+    return;
+  }
+
+  window.starcoAppInitialized = true;
+
+  // 2. Inicializar la escena 3D si existe el contenedor
   const container = document.getElementById('webgl-container');
   let scene3D = null;
   if (container) {
-    scene3D = new Scene3D('webgl-container');
-    window.starcoScene = scene3D;
+    try {
+      scene3D = new Scene3D('webgl-container');
+      window.starcoScene = scene3D;
+      console.log("🌟 STAR/CO 3D Grayscale Engine inicializado con éxito.");
+    } catch (err) {
+      console.error("Error al instanciar Scene3D:", err);
+    }
   }
 
-  // 2. Referencias a elementos del DOM (HUD / Controles)
+  // 3. Referencias a elementos del DOM (HUD / Controles)
   const btnAudio = document.getElementById('btn-audio');
   const audioIcon = document.getElementById('audio-icon');
   const btnReplay = document.getElementById('btn-replay');
@@ -23,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cardDust = document.getElementById('card-dust');
   const cardCrystals = document.getElementById('card-crystals');
 
-  // 3. Control de Audio FX
+  // 4. Control de Audio FX
   if (btnAudio) {
     btnAudio.addEventListener('click', () => {
       if (window.cosmicAudio) {
@@ -39,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Repetir Intro de la Estrella
+  // 5. Repetir Intro de la Estrella
   if (btnReplay) {
     btnReplay.addEventListener('click', () => {
       if (scene3D && scene3D.star) {
@@ -48,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Botón Supernova Burst
+  // 6. Botón Supernova Burst
   if (btnSupernova) {
     btnSupernova.addEventListener('click', () => {
       if (scene3D && scene3D.star) {
@@ -57,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Alternar Anillos Orbitales
+  // 7. Alternar Anillos Orbitales
   if (btnToggleRings) {
     btnToggleRings.addEventListener('click', () => {
       if (scene3D && scene3D.star) {
@@ -67,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Interacción con Tarjetas
+  // 8. Interacción con Tarjetas
   if (cardStar) {
     cardStar.addEventListener('click', () => {
       if (scene3D && scene3D.star) {
@@ -98,9 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 8. Atajos de teclado para pruebas rápidas
+  // 9. Atajos de teclado para pruebas rápidas
   window.addEventListener('keydown', (e) => {
-    // Si el usuario está escribiendo en un input, ignorar
     if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
 
     if (e.code === 'Space') {
@@ -112,6 +127,13 @@ document.addEventListener('DOMContentLoaded', () => {
       btnAudio.click();
     }
   });
+}
 
-  console.log("🌟 STAR/CO 3D Grayscale Engine inicializado con éxito.");
-});
+// Ejecutar inmediatamente si el DOM ya está listo, de lo contrario escuchar DOMContentLoaded y load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initStarcoApp);
+} else {
+  initStarcoApp();
+}
+window.addEventListener('load', initStarcoApp);
+
