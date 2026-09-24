@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>STAR/CO Digital Studio</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-container":"#636465","on-error-container":"#ffdad6","on-error":"#690005","on-tertiary-fixed":"#1a1c1c","secondary-container":"#454747","on-primary-fixed":"#1a1c1c","on-surface-variant":"#c4c7c8","error":"#ffb4ab","primary-fixed-dim":"#c6c6c7","on-secondary-container":"#b4b5b5","surface-tint":"#c6c6c7","tertiary":"#ffffff","secondary":"#c6c6c6","inverse-on-surface":"#313030","on-primary-fixed-variant":"#454747","on-primary-container":"#636565","tertiary-fixed":"#e3e2e2","on-background":"#e5e2e1","tertiary-fixed-dim":"#c6c6c6","surface-dim":"#131313","surface-container":"#201f1f","surface-container-highest":"#353534","outline":"#8e9192","surface":"#131313","on-secondary":"#2f3131","background":"#131313","secondary-fixed":"#e2e2e2","primary":"#ffffff","surface-container-low":"#1c1b1b","on-secondary-fixed":"#1a1c1c","error-container":"#93000a","primary-container":"#e2e2e2","on-tertiary":"#2f3131","inverse-primary":"#5d5f5f","on-tertiary-fixed-variant":"#464747","surface-container-high":"#2a2a2a","on-secondary-fixed-variant":"#454747","outline-variant":"#444748","primary-fixed":"#e2e2e2","surface-variant":"#353534","inverse-surface":"#e5e2e1","on-primary":"#2f3131","tertiary-container":"#e3e2e2","on-surface":"#e5e2e1","surface-container-lowest":"#0e0e0e","secondary-fixed-dim":"#c6c6c6","surface-bright":"#3a3939"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xl":"2.5rem","space-3xl":"6rem","space-2xl":"4rem","margin-tablet":"3rem","space-lg":"1.5rem","space-xs":"0.25rem",margin:"1.5rem",gutter:"1.5rem","gutter-desktop":"2.5rem","space-md":"1rem","margin-desktop":"5rem","space-sm":"0.5rem"},fontFamily:{"display-hero-mobile":["Space Grotesk"],"label-sm":["Space Grotesk"],"body-md":["Inter"],"headline-md":["Space Grotesk"],"body-xl":["Inter"],"body-lg":["Inter"],"headline-sm":["Space Grotesk"],"label-md":["Space Grotesk"],"headline-xl":["Space Grotesk"],"label-lg":["Space Grotesk"],"display-hero":["Space Grotesk"],"headline-xl-mobile":["Space Grotesk"],"headline-lg":["Space Grotesk"]},fontSize:{"display-hero-mobile":["40px",{lineHeight:"44px",letterSpacing:"-0.03em",fontWeight:"700"}],"label-sm":["9px",{lineHeight:"12px",letterSpacing:"0.2em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"30px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-xl":["20px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"26px",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["18px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"600"}],"label-md":["11px",{lineHeight:"14px",letterSpacing:"0.14em",fontWeight:"500"}],"headline-xl":["56px",{lineHeight:"60px",letterSpacing:"-0.03em",fontWeight:"700"}],"label-lg":["13px",{lineHeight:"16px",letterSpacing:"0.12em",fontWeight:"600"}],"display-hero":["80px",{lineHeight:"84px",letterSpacing:"-0.04em",fontWeight:"700"}],"headline-xl-mobile":["32px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg":["36px",{lineHeight:"42px",letterSpacing:"-0.02em",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-surface-container-high"><div class="h-20 w-full max-w-7xl mx-auto px-margin lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center tracking-tighter uppercase font-headline-sm text-headline-sm text-primary group" data-path="inicio" href="#"><span class="font-bold">STAR</span><span class="text-secondary group-hover:text-primary transition-colors">/</span><span class="font-bold">CO</span></a></div><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-primary border-b border-primary"><a aria-current="page" class="font-label-lg uppercase tracking-wider transition-colors py-space-xs text-primary border-b border-primary" data-path="inicio" href="#">Inicio</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors py-space-xs" data-path="servicios" href="#">Servicios</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors py-space-xs" data-path="como-funciona" href="#">Cómo funciona</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors py-space-xs" data-path="portafolio" href="#">Portafolio</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors py-space-xs" data-path="precios" href="#">Precios</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors py-space-xs" data-path="contacto" href="#">Contacto</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center bg-primary text-surface-container-lowest font-label-lg text-label-lg uppercase tracking-wider px-space-md py-space-sm rounded-none hover:bg-secondary-fixed transition-all hover:shadow-[0_0_16px_rgba(255,255,255,0.25)]" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20una%20cotizaci%C3%B3n%20gratis" rel="noopener noreferrer" target="_blank">Cotización gratis</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Abrir menú" class="md:hidden p-space-xs text-on-surface hover:text-primary transition-colors flex items-center justify-center" id="mobile-menu-btn"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></div><div class="hidden md:hidden fixed inset-x-0 top-20 bg-surface-container-lowest/98 border-b border-surface-container-high px-margin py-space-lg backdrop-blur-2xl" id="mobile-flyout"><div class="flex flex-col gap-space-md"><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary py-space-xs border-b border-surface-container-high/40" data-path="inicio" href="#">Inicio</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary py-space-xs border-b border-surface-container-high/40" data-path="servicios" href="#">Servicios</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary py-space-xs border-b border-surface-container-high/40" data-path="como-funciona" href="#">Cómo funciona</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary py-space-xs border-b border-surface-container-high/40" data-path="portafolio" href="#">Portafolio</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary py-space-xs border-b border-surface-container-high/40" data-path="precios" href="#">Precios</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary py-space-xs border-b border-surface-container-high/40" data-path="contacto" href="#">Contacto</a><a class="mt-space-sm inline-flex items-center justify-center bg-primary text-surface-container-lowest font-label-lg text-label-lg uppercase tracking-wider px-space-md py-space-sm text-center" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20una%20cotizaci%C3%B3n%20gratis" rel="noopener noreferrer" target="_blank">Cotización gratis</a></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full text-on-surface selection:bg-primary selection:text-surface-container-lowest">
+<!-- ==========================================
+       1. HERO SECTION
+       ========================================== -->
+<section class="relative w-full min-h-[942px] flex items-center justify-center overflow-hidden bg-surface-container-lowest border-b border-surface-container-high px-margin lg:px-margin-desktop py-space-2xl">
+<!-- Atmospheric Blueprint Canvas & Particles -->
+<div class="absolute inset-0 pointer-events-none opacity-25">
+<svg class="w-full h-full" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="64" id="brutalist-grid" patternunits="userSpaceOnUse" width="64">
+<path d="M 64 0 L 0 0 0 64" fill="none" stroke="#2A2A2A" stroke-width="0.75"></path>
+<circle cx="64" cy="64" fill="#C0C0C0" opacity="0.3" r="1"></circle>
+</pattern>
+</defs>
+<rect fill="url(#brutalist-grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Soft Radial Depth Scrim -->
+<div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_40%,rgba(255,255,255,0.05),transparent_70%)]"></div>
+<div class="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center space-y-space-lg">
+<!-- Minimalist Architectural Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-low border border-surface-container-high text-secondary text-label-md font-label-md tracking-wider uppercase">
+<span class="text-primary">★</span>
+<span>Estudio digital en Torreón · Web · IA · Reseñas · Menús</span>
+</div>
+<!-- Imposing Main Headline -->
+<h1 class="font-display-hero text-headline-xl sm:text-display-hero uppercase tracking-tight text-primary leading-none max-w-4xl">
+        Todo lo que tu negocio necesita para crecer en digital — <span class="text-secondary font-light">en un solo lugar</span>
+</h1>
+<!-- Architectural Monolith Subtitle -->
+<p class="font-body-xl text-body-lg sm:text-body-xl text-on-surface-variant max-w-2xl leading-relaxed">
+        Diseñamos tu web, automatizamos tus procesos con IA, conseguimos tus reseñas en Google y digitalizamos tu menú. Tú solo te enfocas en atender a tus clientes.
+      </p>
+<!-- Action Cluster -->
+<div class="flex flex-col sm:flex-row items-center gap-space-md pt-space-md w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-surface-container-lowest font-label-lg text-label-lg uppercase tracking-wider px-space-xl py-4 hover:bg-secondary-fixed transition-all duration-300 shadow-[0_0_24px_rgba(255,255,255,0.2)]" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20que%20me%20llamen%20hoy" rel="noopener noreferrer" target="_blank">
+          Quiero que me llamen hoy
+        </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center bg-transparent border border-outline text-primary font-label-lg text-label-lg uppercase tracking-wider px-space-xl py-4 hover:border-primary hover:bg-surface-container-high/40 transition-all duration-300" href="#servicios">
+          Ver servicios
+        </a>
+</div>
+<!-- Scroll Indicator -->
+<div class="pt-space-xl flex flex-col items-center gap-2 text-outline">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Desplazar</span>
+<div class="w-4 h-7 border border-outline flex items-start justify-center p-1">
+<div class="w-1 h-2 bg-primary animate-bounce"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       2. BANDA DE CONFIANZA
+       ========================================== -->
+<section class="w-full bg-surface-container-low border-y border-surface-container-high py-space-md">
+<div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-space-md lg:gap-space-lg items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">bolt</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Webs en 2-5 días</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">smart_toy</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Automatización IA real</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">grade</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Reseñas sin QR</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">restaurant</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Menús sin apps</span>
+</div>
+<div class="col-span-2 md:col-span-1 flex items-center gap-3 justify-center md:justify-start">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">Resultados semana 1</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       3. CUATRO SERVICIOS
+       ========================================== -->
+<section class="w-full bg-surface py-space-3xl border-b border-surface-container-high px-margin lg:px-margin-desktop" id="servicios">
+<div class="max-w-7xl mx-auto space-y-space-2xl">
+<!-- Section Header -->
+<div class="text-center space-y-space-xs max-w-3xl mx-auto">
+<p class="font-label-md text-label-md uppercase tracking-widest text-outline">Precisión · Arquitectura · Rendimiento</p>
+<h2 class="font-headline-xl text-headline-lg sm:text-headline-xl uppercase text-primary tracking-tight">Nuestros Servicios</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Cuatro soluciones diseñadas para hacer crecer tu negocio digital con tecnología de vanguardia y ejecución inmediata.</p>
+</div>
+<!-- 2x2 Services Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter lg:gap-gutter-desktop">
+<!-- BLOQUE 1: DISEÑO WEB PROFESIONAL -->
+<article class="relative flex flex-col justify-between bg-surface-container-low border border-surface-container-high p-space-xl group hover:border-secondary hover:shadow-[0_0_24px_rgba(255,255,255,0.06)] transition-all duration-300">
+<div class="absolute top-0 left-0 w-full h-[3px] bg-secondary"></div>
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">01 / Sólido</span>
+<span class="material-symbols-outlined text-secondary text-2xl">language</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-primary">Diseño Web Profesional</h3>
+<p class="font-label-lg text-label-lg uppercase tracking-wider text-secondary">Tu web más poderosa, en días</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Creamos sitios web de alto impacto orientados a convertir visitantes en clientes. Diseño único, carga ultrarrápida, optimizado para Google y con integración directa a WhatsApp.
+            </p>
+<ul class="space-y-space-xs pt-space-sm border-t border-surface-container-high">
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Landing page de conversión de alto impacto</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Sitio corporativo completo hasta 5 secciones</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Integración con WhatsApp, formularios y Google Maps</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Optimización SEO básica incluida</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Entrega en 2 a 6 días hábiles</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Diseño 100% responsivo para móvil y escritorio</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<a class="w-full inline-flex items-center justify-center border border-secondary text-primary font-label-lg text-label-lg uppercase tracking-wider py-space-sm hover:bg-primary hover:text-surface-container-lowest transition-colors" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20mi%20sitio%20web" rel="noopener noreferrer" target="_blank">
+              Quiero mi web
+            </a>
+</div>
+</article>
+<!-- BLOQUE 2: AUTOMATIZACIÓN CON IA -->
+<article class="relative flex flex-col justify-between bg-surface-container-low border border-surface-container-high p-space-xl group hover:border-secondary hover:shadow-[0_0_24px_rgba(255,255,255,0.06)] transition-all duration-300">
+<div class="absolute top-0 left-0 w-full h-[3px] bg-secondary"></div>
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">02 / Inteligencia</span>
+<span class="material-symbols-outlined text-secondary text-2xl">memory</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-primary">Automatización con IA</h3>
+<p class="font-label-lg text-label-lg uppercase tracking-wider text-secondary">Trabaja menos, produce más</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Analizamos los procesos repetitivos de tu negocio y los automatizamos con herramientas de IA. Respuestas automáticas, seguimiento de clientes, reportes y más — todo funcionando solo mientras tú descansas.
+            </p>
+<ul class="space-y-space-xs pt-space-sm border-t border-surface-container-high">
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Respuestas automáticas a WhatsApp con IA 24/7</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Seguimiento automático de clientes potenciales</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Generación de contenido para redes sociales</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Reportes automáticos de ventas o reservas</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Chatbots entrenados con la información de tu negocio</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Clasificación y respuesta automática de mensajes</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<a class="w-full inline-flex items-center justify-center border border-secondary text-primary font-label-lg text-label-lg uppercase tracking-wider py-space-sm hover:bg-primary hover:text-surface-container-lowest transition-colors" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20automatizar%20mi%20negocio" rel="noopener noreferrer" target="_blank">
+              Quiero automatizar mi negocio
+            </a>
+</div>
+</article>
+<!-- BLOQUE 3: RESEÑAS GOOGLE -->
+<article class="relative flex flex-col justify-between bg-surface-container-low border border-surface-container-high p-space-xl group hover:border-secondary hover:shadow-[0_0_24px_rgba(255,255,255,0.06)] transition-all duration-300">
+<div class="absolute top-0 left-0 w-full h-[3px] bg-secondary"></div>
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">03 / Reputación</span>
+<span class="material-symbols-outlined text-secondary text-2xl">reviews</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-primary">Reseñas Google (Por Celular, Sin QR)</h3>
+<p class="font-label-lg text-label-lg uppercase tracking-wider text-secondary">Más estrellas en Google, más clientes nuevos</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Contactamos directamente a tus clientes por celular después de que los atiendes. Les enviamos un mensaje amable y personalizado guiándolos paso a paso para que te dejen una reseña de 5 estrellas en Google. Sin códigos QR, sin apps, sin que tú hagas nada.
+            </p>
+<ul class="space-y-space-xs pt-space-sm border-t border-surface-container-high">
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Tú nos compartes el número del cliente satisfecho</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Nosotros lo contactamos por celular con mensaje personalizado</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Lo guiamos paso a paso para dejar la reseña en Google</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Seguimiento hasta obtener la reseña confirmada</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Reporte semanal con resultados y avance de puntuación</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<a class="w-full inline-flex items-center justify-center border border-secondary text-primary font-label-lg text-label-lg uppercase tracking-wider py-space-sm hover:bg-primary hover:text-surface-container-lowest transition-colors" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20m%C3%A1s%20rese%C3%B1as%20en%20Google" rel="noopener noreferrer" target="_blank">
+              Quiero más reseñas
+            </a>
+</div>
+</article>
+<!-- BLOQUE 4: MENÚ DIGITAL -->
+<article class="relative flex flex-col justify-between bg-surface-container-low border border-surface-container-high p-space-xl group hover:border-secondary hover:shadow-[0_0_24px_rgba(255,255,255,0.06)] transition-all duration-300">
+<div class="absolute top-0 left-0 w-full h-[3px] bg-secondary"></div>
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">04 / Gastronomía</span>
+<span class="material-symbols-outlined text-secondary text-2xl">menu_book</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-primary">Menú Digital Profesional</h3>
+<p class="font-label-lg text-label-lg uppercase tracking-wider text-secondary">Tu menú siempre actualizado, en el celular de tus clientes</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Creamos tu menú digital profesional accesible desde cualquier celular mediante un enlace, sin que tus clientes descarguen nada. Con fotos de tus platillos, categorías organizadas, botón de pedido por WhatsApp y actualizable en tiempo real desde tu celular.
+            </p>
+<ul class="space-y-space-xs pt-space-sm border-t border-surface-container-high">
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Menú accesible por enlace desde cualquier celular</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Fotos profesionales de platillos incluidas</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Categorías y precios organizados y navegables</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Botón de pedido directo por WhatsApp</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Actualizable en tiempo real sin programar</span>
+</li>
+<li class="flex items-start gap-2.5 text-body-md text-on-surface">
+<span class="text-secondary font-bold">✓</span>
+<span>Enlace personalizado listo en 24 horas</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<a class="w-full inline-flex items-center justify-center border border-secondary text-primary font-label-lg text-label-lg uppercase tracking-wider py-space-sm hover:bg-primary hover:text-surface-container-lowest transition-colors" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20mi%20men%C3%BA%20digital" rel="noopener noreferrer" target="_blank">
+              Quiero mi menú digital
+            </a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       4. PARA QUIÉN ES STAR/CO
+       ========================================== -->
+<section class="w-full bg-surface-container-lowest py-space-3xl border-b border-surface-container-high px-margin lg:px-margin-desktop">
+<div class="max-w-7xl mx-auto space-y-space-2xl">
+<div class="text-center space-y-space-xs max-w-3xl mx-auto">
+<p class="font-label-md text-label-md uppercase tracking-widest text-outline">Diagnóstico Operativo</p>
+<h2 class="font-headline-xl text-headline-lg sm:text-headline-xl uppercase text-primary">¿Tu negocio está en alguna de estas situaciones?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Si te identificas con una o más, podemos ayudarte hoy mismo a transformar tu cuello de botella en un motor de ventas.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Tarjeta 1 -->
+<div class="bg-surface-container p-space-lg border border-surface-container-high flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<span class="material-symbols-outlined text-secondary text-3xl">storefront</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary">No tienes web o la tuya no convierte</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Tienes un negocio en Torreón y no tienes presencia digital profesional, o tu web actual no genera clientes. Te hacemos una que sí convierte.</p>
+</div>
+<div class="pt-space-xs border-t border-surface-container-high/60">
+<span class="font-label-sm text-label-sm uppercase text-outline">Solución: Web de Alta Conversión</span>
+</div>
+</div>
+<!-- Tarjeta 2 -->
+<div class="bg-surface-container p-space-lg border border-surface-container-high flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<span class="material-symbols-outlined text-secondary text-3xl">hourglass_empty</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary">Pierdes horas en tareas repetitivas</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Tu equipo responde los mismos mensajes, hace los mismos procesos a mano y pierde tiempo valioso. Lo automatizamos con IA y recuperas esas horas.</p>
+</div>
+<div class="pt-space-xs border-t border-surface-container-high/60">
+<span class="font-label-sm text-label-sm uppercase text-outline">Solución: Pipeline Automatizado</span>
+</div>
+</div>
+<!-- Tarjeta 3 -->
+<div class="bg-surface-container p-space-lg border border-surface-container-high flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<span class="material-symbols-outlined text-secondary text-3xl">star_half</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary">Tienes pocas reseñas en Google</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Tus clientes están satisfechos pero nadie te deja reseñas. Nosotros los contactamos por celular y los guiamos para que lo hagan fácilmente.</p>
+</div>
+<div class="pt-space-xs border-t border-surface-container-high/60">
+<span class="font-label-sm text-label-sm uppercase text-outline">Solución: Outreach Directo</span>
+</div>
+</div>
+<!-- Tarjeta 4 -->
+<div class="bg-surface-container p-space-lg border border-surface-container-high flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<span class="material-symbols-outlined text-secondary text-3xl">menu_book</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary">Tu menú es de papel o desactualizado</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Cada vez que cambias un precio tienes que reimprimir todo. Con tu menú digital lo actualizas en segundos desde tu celular.</p>
+</div>
+<div class="pt-space-xs border-t border-surface-container-high/60">
+<span class="font-label-sm text-label-sm uppercase text-outline">Solución: Menú Cloud Instantáneo</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       5. CÓMO TRABAJAMOS CONTIGO
+       ========================================== -->
+<section class="w-full bg-surface-container-low py-space-3xl border-b border-surface-container-high px-margin lg:px-margin-desktop" id="como-funciona">
+<div class="max-w-7xl mx-auto space-y-space-2xl">
+<div class="text-center space-y-space-xs max-w-3xl mx-auto">
+<p class="font-label-md text-label-md uppercase tracking-widest text-outline">Metodología STAR/CO</p>
+<h2 class="font-headline-xl text-headline-lg sm:text-headline-xl uppercase text-primary">Un proceso simple, rápido y sin tecnicismos</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Sin curvas de aprendizaje complejas. Coordinamos todo directamente contigo por WhatsApp.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter relative">
+<!-- Paso 1 -->
+<div class="relative flex flex-col space-y-space-sm bg-surface-container-lowest p-space-lg border border-surface-container-high">
+<span class="font-headline-xl text-headline-xl text-secondary opacity-60">01</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary">Nos Cuentas</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Nos dices qué necesita tu negocio por WhatsApp o en una llamada rápida. Sin formularios largos.</p>
+</div>
+<!-- Paso 2 -->
+<div class="relative flex flex-col space-y-space-sm bg-surface-container-lowest p-space-lg border border-surface-container-high">
+<span class="font-headline-xl text-headline-xl text-secondary opacity-60">02</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary">Te Proponemos</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">En 24 horas te enviamos una propuesta clara con precio, alcance exacto y tiempos de entrega garantizados.</p>
+</div>
+<!-- Paso 3 -->
+<div class="relative flex flex-col space-y-space-sm bg-surface-container-lowest p-space-lg border border-surface-container-high">
+<span class="font-headline-xl text-headline-xl text-secondary opacity-60">03</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary">Construimos</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Diseñamos, desarrollamos o activamos tu solución técnica. Tú ves avances y avances funcionales en tiempo real.</p>
+</div>
+<!-- Paso 4 -->
+<div class="relative flex flex-col space-y-space-sm bg-surface-container-lowest p-space-lg border border-surface-container-high">
+<span class="font-headline-xl text-headline-xl text-secondary opacity-60">04</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary">Lanzamos</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Publicamos tu web, activamos tu IA o arrancamos el flujo de reseñas. Soporte 30 días gratis incluido.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       6. PORTAFOLIO
+       ========================================== -->
+<section class="w-full bg-surface-container-lowest py-space-3xl border-b border-surface-container-high px-margin lg:px-margin-desktop" id="portafolio">
+<div class="max-w-7xl mx-auto space-y-space-2xl">
+<div class="text-center space-y-space-xs max-w-3xl mx-auto">
+<p class="font-label-md text-label-md uppercase tracking-widest text-outline">Casos de Éxito</p>
+<h2 class="font-headline-xl text-headline-lg sm:text-headline-xl uppercase text-primary">Proyectos reales, resultados reales</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Negocios en Torreón y la Comarca Lagunera que ya crecen y dominan su categoría con STAR/CO.</p>
+</div>
+<!-- 2x2 Portfolio Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter lg:gap-gutter-desktop">
+<!-- Item 1: Vacar Detailing -->
+<div class="bg-surface-container-low border border-surface-container-high overflow-hidden group">
+<div class="h-64 w-full bg-surface-container-highest relative overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-500" data-alt="Monochromatic luxury car detailing studio shot, architectural lighting on sports car bodywork, dark brushed steel aesthetic, high-contrast black and white photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDsnA1yyafLc3-j9V90hZJ_y_x4c68n_i1lQQDUlHRpr9v_4f4_cntVtKp7LMTSSi_A0K6btzWWTFXEWcc0VtFMfFfc__x47F-rxWfuRDpXkSHtAFi6Pt-_KY9jjObmmAkh15NZii86RS5-FW7yYX_FB2m7ElnFaSNa46fkV9hYevyoaTK2Sx-R6zfE0339KpoxLAuF-tYNw_mP6x4zujL9RYEyHoMsSToK4I45l6_1JWbkPsOp4Kw"/>
+<div class="absolute inset-0 bg-surface-container-lowest/40"></div>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/90 px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-primary border border-surface-container-high">Web profesional</div>
+</div>
+<div class="p-space-lg space-y-2">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md uppercase text-primary">Vacar Detailing</h3>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">+85% reservas online</span>
+</div>
+<p class="font-body-md text-body-md text-outline">Detailing automotriz premium · Torreón, Coah.</p>
+</div>
+</div>
+<!-- Item 2: James Cast Planner -->
+<div class="bg-surface-container-low border border-surface-container-high overflow-hidden group">
+<div class="h-64 w-full bg-surface-container-highest relative overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist architectural event design setup, black and white fine dining banquet lighting, strict geometric symmetry, luxury monolith style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHQvnvbeALQOpclaiyNUAO5vVj8521FAyShnuHWSZ1JVURDZSeGK9y_ivNS-i4v5iDvOH6fzS0snaaLcrc03kfMZ2zpZYQeFFzvxwPKecKmUYRJlkO4Jg5DHjgWNwmUnvuInZFjjBUPnnrVxxvQdbL_yhXgJbjvKhQB8Xi42acUbF0atWpuG0OuH0JvHL6jbPSndaCTkTnsk3dKX26eTco5894DzXaMkvVOlQDS2I_FVI6_wdEDhMh"/>
+<div class="absolute inset-0 bg-surface-container-lowest/40"></div>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/90 px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-primary border border-surface-container-high">Web profesional</div>
+</div>
+<div class="p-space-lg space-y-2">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md uppercase text-primary">James Cast Planner</h3>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">+350 producciones</span>
+</div>
+<p class="font-body-md text-body-md text-outline">Eventos y escenografía de gran escala</p>
+</div>
+</div>
+<!-- Item 3: Annie Natural Beauty -->
+<div class="bg-surface-container-low border border-surface-container-high overflow-hidden group">
+<div class="h-64 w-full bg-surface-container-highest relative overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-500" data-alt="Clean aesthetic cosmetic skincare laboratory bottles, stark studio lighting, soft shadows, brutalist glass composition in pure black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSSTyv9P4-Pgexs-b20_89cE2DlbBe48ATrtxnFOSPDFRqKh5mdUNdG9BQnfeQBez6caHfW5DONNtK-E5dQbT21Xh7fKUzZafB9XZiAZUwvOMwgtngLvpcTt6iBohGjF_tXMnf7war2rtO9oSsXeciRtrRUFGFRNvKgKgFSoe8L3z57RQg2l6mAUemuwVJmOXYW8NdmNQkAVTVPrB-eKel_KT5rBnrV2kLG9fRxtBEJ4xZgNyq3mg5"/>
+<div class="absolute inset-0 bg-surface-container-lowest/40"></div>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/90 px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-primary border border-surface-container-high">Web profesional</div>
+</div>
+<div class="p-space-lg space-y-2">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md uppercase text-primary">Annie Natural Beauty</h3>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">2.5x interacción</span>
+</div>
+<p class="font-body-md text-body-md text-outline">Salud, bienestar y cuidado cosmético</p>
+</div>
+</div>
+<!-- Item 4: Placeholder de Lujo -->
+<div class="bg-surface-container-low border border-dashed border-secondary/60 flex flex-col items-center justify-center p-space-xl text-center group hover:bg-surface-container transition-colors">
+<div class="w-16 h-16 border border-secondary flex items-center justify-center mb-space-md text-primary">
+<span class="material-symbols-outlined text-3xl">add</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-primary mb-2">Tu Negocio Aquí</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-space-md">Sé el referente de tu sector con una infraestructura digital impecable y soporte continuo.</p>
+<a class="font-label-lg text-label-lg uppercase text-primary underline underline-offset-4 tracking-wider hover:text-secondary transition-colors" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20empezar%20hoy" rel="noopener noreferrer" target="_blank">Empieza hoy →</a>
+</div>
+</div>
+<div class="text-center pt-space-md">
+<a class="inline-flex items-center justify-center border border-secondary text-primary font-label-lg text-label-lg uppercase tracking-wider px-space-xl py-space-sm hover:bg-primary hover:text-surface-container-lowest transition-all" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20mi%20negocio%20podr%C3%ADa%20ser%20el%20pr%C3%B3ximo" rel="noopener noreferrer" target="_blank">
+          ¿Tu negocio podría ser el próximo? Hablemos
+        </a>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       7. PRECIOS TRANSPARENTES
+       ========================================== -->
+<section class="w-full bg-surface py-space-3xl border-b border-surface-container-high px-margin lg:px-margin-desktop" id="precios">
+<div class="max-w-7xl mx-auto space-y-space-2xl">
+<div class="text-center space-y-space-xs max-w-3xl mx-auto">
+<p class="font-label-md text-label-md uppercase tracking-widest text-outline">Planes Sin Sorpresas</p>
+<h2 class="font-headline-xl text-headline-lg sm:text-headline-xl uppercase text-primary">Inversión clara, sin sorpresas ni letras chicas</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Elige el servicio que necesitas. Puedes combinar varios con descuento inmediato.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter items-stretch">
+<!-- Plan 1: WEB BÁSICA -->
+<div class="bg-surface-container-low border border-surface-container-high p-space-lg flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm uppercase text-outline">Lanza Ya</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary">Web Básica</h4>
+<div class="pt-2">
+<span class="font-label-sm text-label-sm text-outline">Desde</span>
+<div class="font-headline-lg text-headline-lg text-primary leading-none">$2,000 <span class="font-body-md text-body-md text-outline">MXN</span></div>
+<span class="font-label-sm text-label-sm text-outline">pago único por proyecto</span>
+</div>
+<ul class="space-y-space-xs pt-space-md border-t border-surface-container-high text-body-md text-on-surface-variant">
+<li class="flex items-center gap-2"><span>·</span> Landing page de 1 página</li>
+<li class="flex items-center gap-2"><span>·</span> UI/UX a la medida</li>
+<li class="flex items-center gap-2"><span>·</span> Botón directo a WhatsApp</li>
+<li class="flex items-center gap-2"><span>·</span> Optimización móvil total</li>
+<li class="flex items-center gap-2"><span>·</span> Entrega en 2 a 5 días</li>
+</ul>
+</div>
+<a class="w-full inline-flex items-center justify-center border border-outline text-primary font-label-lg text-label-lg uppercase tracking-wider py-space-sm hover:border-primary hover:bg-surface-container-high transition-colors" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20la%20Web%20B%C3%A1sica" rel="noopener noreferrer" target="_blank">
+            Lo quiero
+          </a>
+</div>
+<!-- Plan 2: WEB PRO (DESTACADA) -->
+<div class="relative bg-surface-container border-2 border-primary p-space-lg flex flex-col justify-between space-y-space-md shadow-[0_0_32px_rgba(255,255,255,0.15)]">
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-surface-container-lowest font-label-sm text-label-sm uppercase tracking-widest px-space-md py-1 font-bold">
+            Más Solicitada
+          </div>
+<div class="space-y-space-sm pt-2">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Escalabilidad Total</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary">Web Pro</h4>
+<div class="pt-2">
+<span class="font-label-sm text-label-sm text-outline">Desde</span>
+<div class="font-headline-lg text-headline-lg text-primary leading-none">$3,500 <span class="font-body-md text-body-md text-outline">MXN</span></div>
+<span class="font-label-sm text-label-sm text-outline">pago único por proyecto</span>
+</div>
+<ul class="space-y-space-xs pt-space-md border-t border-surface-container-high text-body-md text-on-surface">
+<li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Hasta 5 secciones completas</li>
+<li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> SEO técnico estructurado</li>
+<li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Sistema cotización / reservas</li>
+<li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Panel autogestionable</li>
+<li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> 1 Automatización IA incluida</li>
+<li class="flex items-center gap-2"><span class="text-primary font-bold">✓</span> Entrega en 3 a 6 días</li>
+</ul>
+</div>
+<a class="w-full inline-flex items-center justify-center bg-primary text-surface-container-lowest font-label-lg text-label-lg uppercase tracking-wider py-space-sm hover:bg-secondary-fixed transition-colors font-bold shadow-[0_0_12px_rgba(255,255,255,0.2)]" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20la%20Web%20Pro" rel="noopener noreferrer" target="_blank">
+            Elegir Web Pro
+          </a>
+</div>
+<!-- Plan 3: RESEÑAS GOOGLE -->
+<div class="bg-surface-container-low border border-surface-container-high p-space-lg flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<span class="font-label-sm text-label-sm uppercase text-outline">Reputación Activa</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary">Reseñas Google</h4>
+<div class="pt-2">
+<span class="font-label-sm text-label-sm text-outline">Desde</span>
+<div class="font-headline-lg text-headline-lg text-primary leading-none">$500 <span class="font-body-md text-body-md text-outline">MXN</span></div>
+<span class="font-label-sm text-label-sm text-outline">al mes · sin plazos forzosos</span>
+</div>
+<ul class="space-y-space-xs pt-space-md border-t border-surface-container-high text-body-md text-on-surface-variant">
+<li class="flex items-center gap-2"><span>·</span> Hasta 20 contactos directos/mes</li>
+<li class="flex items-center gap-2"><span>·</span> Mensaje personalizado de cortesía</li>
+<li class="flex items-center gap-2"><span>·</span> Contacto directo vía celular</li>
+<li class="flex items-center gap-2"><span>·</span> Seguimiento hasta confirmación</li>
+<li class="flex items-center gap-2"><span>·</span> Reporte semanal de score</li>
+</ul>
+</div>
+<a class="w-full inline-flex items-center justify-center border border-outline text-primary font-label-lg text-label-lg uppercase tracking-wider py-space-sm hover:border-primary hover:bg-surface-container-high transition-colors" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20el%20servicio%20de%20Rese%C3%B1as%20Google" rel="noopener noreferrer" target="_blank">
+            Contratar
+          </a>
+</div>
+<!-- Plan 4: MENÚ DIGITAL -->
+<div class="bg-surface-container-low border border-surface-container-high p-space-lg flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<span class="font-label-sm text-label-sm uppercase text-outline">Host &amp; Edición</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-primary">Menú Digital</h4>
+<div class="pt-2">
+<span class="font-label-sm text-label-sm text-outline">Desde</span>
+<div class="font-headline-lg text-headline-lg text-primary leading-none">$500 <span class="font-body-md text-body-md text-outline">MXN</span></div>
+<span class="font-label-sm text-label-sm text-outline">al mes · soporte continuo</span>
+</div>
+<ul class="space-y-space-xs pt-space-md border-t border-surface-container-high text-body-md text-on-surface-variant">
+<li class="flex items-center gap-2"><span>·</span> Fotos y categorías ilimitadas</li>
+<li class="flex items-center gap-2"><span>·</span> Enlace personalizado listo en 24h</li>
+<li class="flex items-center gap-2"><span>·</span> Pedidos directo al WhatsApp</li>
+<li class="flex items-center gap-2"><span>·</span> Actualización en tiempo real</li>
+<li class="flex items-center gap-2"><span>·</span> Sin descargas ni lectores QR</li>
+</ul>
+</div>
+<a class="w-full inline-flex items-center justify-center border border-outline text-primary font-label-lg text-label-lg uppercase tracking-wider py-space-sm hover:border-primary hover:bg-surface-container-high transition-colors" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20el%20Men%C3%BA%20Digital" rel="noopener noreferrer" target="_blank">
+            Contratar
+          </a>
+</div>
+</div>
+<!-- BANNER DESTACADO DE PAQUETE -->
+<div class="border border-secondary bg-surface-container-low p-space-md sm:p-space-lg text-center flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="text-left">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">💡 Paquete de Ahorro Combinado</span>
+<p class="font-body-lg text-body-lg text-on-surface">Reseñas Google + Menú Digital juntos desde <strong>$800 MXN / mes</strong> — ahorras $200 mensuales.</p>
+</div>
+<a class="whitespace-nowrap bg-primary text-surface-container-lowest font-label-lg text-label-lg uppercase tracking-wider px-space-lg py-space-sm hover:bg-secondary-fixed transition-colors" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20el%20Paquete%20Rese%C3%B1as%20%2B%20Men%C3%BA%20Digital" rel="noopener noreferrer" target="_blank">
+          Pedir paquete
+        </a>
+</div>
+<p class="text-center font-body-md text-body-md text-outline">¿Necesitas automatización integral de procesos o desarrollo a medida? Escríbenos y armamos tu propuesta personalizada hoy.</p>
+</div>
+</section>
+<!-- ==========================================
+       8. TESTIMONIOS
+       ========================================== -->
+<section class="w-full bg-surface-container-lowest py-space-3xl border-b border-surface-container-high px-margin lg:px-margin-desktop">
+<div class="max-w-7xl mx-auto space-y-space-2xl">
+<div class="text-center space-y-space-xs max-w-3xl mx-auto">
+<p class="font-label-md text-label-md uppercase tracking-widest text-outline">Validación</p>
+<h2 class="font-headline-xl text-headline-lg sm:text-headline-xl uppercase text-primary">Negocios que ya crecen con STAR/CO</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Confianza depositada por marcas locales que valoran el detalle, la puntualidad y la rentabilidad.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-low border border-surface-container-high p-space-lg flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="text-secondary font-headline-sm tracking-widest">★★★★★</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              "Nos entregaron la página en 4 días y la semana siguiente ya teníamos reservaciones entrando directo por WhatsApp. Cero rollos técnicos, entendieron lo que necesitábamos a la primera."
+            </p>
+</div>
+<div>
+<h5 class="font-headline-sm text-headline-sm uppercase text-primary">Carlos Mendoza</h5>
+<span class="font-label-sm text-label-sm uppercase text-outline">Director · Vacar Detailing</span>
+</div>
+</div>
+<div class="bg-surface-container-low border border-surface-container-high p-space-lg flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="text-secondary font-headline-sm tracking-widest">★★★★★</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              "El servicio de reseñas por celular es una joya. Pasamos de 14 reseñas a más de 80 en solo un mes y medio. Los clientes lo hacen con gusto porque el mensaje que les mandan es súper amable."
+            </p>
+</div>
+<div>
+<h5 class="font-headline-sm text-headline-sm uppercase text-primary">Lic. Mariana Garza</h5>
+<span class="font-label-sm text-label-sm uppercase text-outline">Operaciones · Clínica Lagunera</span>
+</div>
+</div>
+<div class="bg-surface-container-low border border-surface-container-high p-space-lg flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="text-secondary font-headline-sm tracking-widest">★★★★★</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              "El menú digital nos ahorró miles de pesos en reimpresiones. Cambiamos costos en dos minutos y la presentación fotográfica es de primer nivel. Recomendados al 100%."
+            </p>
+</div>
+<div>
+<h5 class="font-headline-sm text-headline-sm uppercase text-primary">Chef Rodrigo Peña</h5>
+<span class="font-label-sm text-label-sm uppercase text-outline">Socio Fundador · Bistro Norte</span>
+</div>
+</div>
+</div>
+<div class="text-center pt-space-xs">
+<a class="inline-flex items-center justify-center border border-secondary text-primary font-label-lg text-label-lg uppercase tracking-wider px-space-lg py-space-sm hover:bg-surface-container-high transition-colors" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20ver%20m%C3%A1s%20casos%20de%20Google" rel="noopener noreferrer" target="_blank">
+          Ver más testimonios en Google
+        </a>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       9. PREGUNTAS FRECUENTES (ACCORDION)
+       ========================================== -->
+<section class="w-full bg-surface-container-low py-space-3xl border-b border-surface-container-high px-margin lg:px-margin-desktop">
+<div class="max-w-4xl mx-auto space-y-space-2xl">
+<div class="text-center space-y-space-xs">
+<p class="font-label-md text-label-md uppercase tracking-widest text-outline">Claridad Inmediata</p>
+<h2 class="font-headline-xl text-headline-lg sm:text-headline-xl uppercase text-primary">Tus dudas, resueltas</h2>
+</div>
+<div class="space-y-space-xs" id="faq-container">
+<!-- FAQ 1 -->
+<details class="group bg-surface-container-lowest border border-surface-container-high p-space-md open:border-secondary transition-colors">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline-sm text-headline-sm uppercase text-primary">
+<span>¿En cuánto tiempo me entregan la web?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-space-md text-body-md text-on-surface-variant font-body-md leading-relaxed border-t border-surface-container-high mt-space-sm">
+            Para sitios tipo Landing Page el tiempo habitual es de 2 a 4 días hábiles una vez entregada tu información. Proyectos Web Pro completos de 5 secciones se entregan en un rango estricto de 3 a 6 días hábiles.
+          </div>
+</details>
+<!-- FAQ 2 -->
+<details class="group bg-surface-container-lowest border border-surface-container-high p-space-md open:border-secondary transition-colors">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline-sm text-headline-sm uppercase text-primary">
+<span>¿Cómo funciona exactamente la automatización con IA?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-space-md text-body-md text-on-surface-variant font-body-md leading-relaxed border-t border-surface-container-high mt-space-sm">
+            Conectamos tus canales (WhatsApp Business, correo, CRM o hojas de cálculo) con modelos de lenguaje configurados con toda la información de tus productos o servicios. La IA responde dudas, perfila clientes, agenda citas o envía cotizaciones en segundos sin intervención humana.
+          </div>
+</details>
+<!-- FAQ 3 -->
+<details class="group bg-surface-container-lowest border border-surface-container-high p-space-md open:border-secondary transition-colors">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline-sm text-headline-sm uppercase text-primary">
+<span>¿Mis clientes sabrán que un servicio externo los contacta para las reseñas?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-space-md text-body-md text-on-surface-variant font-body-md leading-relaxed border-t border-surface-container-high mt-space-sm">
+            No. Nos presentamos como parte de tu equipo de atención y calidad mediante un mensaje cordial y profesional que agradece su preferencia y solicita su retroalimentación en un solo clic.
+          </div>
+</details>
+<!-- FAQ 4 -->
+<details class="group bg-surface-container-lowest border border-surface-container-high p-space-md open:border-secondary transition-colors">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline-sm text-headline-sm uppercase text-primary">
+<span>¿Mis clientes necesitan descargar algo para ver el menú digital?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-space-md text-body-md text-on-surface-variant font-body-md leading-relaxed border-t border-surface-container-high mt-space-sm">
+            Absolutamente nada. Funciona mediante un enlace ultra-rápido en cualquier navegador móvil (Safari, Chrome). No requiere aplicaciones lentas, descargas de PDFs pesados ni lectores de QR complejos.
+          </div>
+</details>
+<!-- FAQ 5 -->
+<details class="group bg-surface-container-lowest border border-surface-container-high p-space-md open:border-secondary transition-colors">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline-sm text-headline-sm uppercase text-primary">
+<span>¿Puedo contratar solo uno de los servicios?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-space-md text-body-md text-on-surface-variant font-body-md leading-relaxed border-t border-surface-container-high mt-space-sm">
+            Por supuesto. Cada servicio funciona de manera 100% independiente. Puedes comenzar contratando solo tu web, tus reseñas o tu menú, e integrar más herramientas conforme tu negocio crezca.
+          </div>
+</details>
+<!-- FAQ 6 -->
+<details class="group bg-surface-container-lowest border border-surface-container-high p-space-md open:border-secondary transition-colors">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline-sm text-headline-sm uppercase text-primary">
+<span>¿Puedo actualizar el menú yo mismo?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-space-md text-body-md text-on-surface-variant font-body-md leading-relaxed border-t border-surface-container-high mt-space-sm">
+            Sí. Te otorgamos acceso inmediato para modificar precios, activar o desactivar platillos agotados desde tu celular. O bien, si lo prefieres, nos mandas un mensaje por WhatsApp y nosotros lo actualizamos por ti sin costo extra.
+          </div>
+</details>
+<!-- FAQ 7 -->
+<details class="group bg-surface-container-lowest border border-surface-container-high p-space-md open:border-secondary transition-colors">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline-sm text-headline-sm uppercase text-primary">
+<span>¿Qué pasa si no me gusta el diseño de mi web?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-space-md text-body-md text-on-surface-variant font-body-md leading-relaxed border-t border-surface-container-high mt-space-sm">
+            Trabajamos con rondas de revisión visual previas al despliegue definitivo. Ajustamos tipografías, colores, copys y diagramación hasta que la plataforma represente con exactitud la autoridad de tu marca.
+          </div>
+</details>
+<!-- FAQ 8 -->
+<details class="group bg-surface-container-lowest border border-surface-container-high p-space-md open:border-secondary transition-colors">
+<summary class="flex justify-between items-center cursor-pointer list-none font-headline-sm text-headline-sm uppercase text-primary">
+<span>¿Puedo cancelar los servicios mensuales cuando quiera?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-space-md text-body-md text-on-surface-variant font-body-md leading-relaxed border-t border-surface-container-high mt-space-sm">
+            Totalmente. No creemos en plazos forzosos ni penalizaciones. Si un mes decides pausar tus reseñas o tu menú, nos avisas antes de tu fecha de corte y se suspende el cobro sin preguntas.
+          </div>
+</details>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       10. CTA FINAL MONOLÍTICO
+       ========================================== -->
+<section class="w-full bg-gradient-to-b from-surface-container-lowest to-surface-container-low py-space-3xl px-margin lg:px-margin-desktop text-center">
+<div class="max-w-4xl mx-auto space-y-space-lg flex flex-col items-center">
+<!-- Architectural Line Marker -->
+<div class="w-16 h-1 bg-secondary mx-auto"></div>
+<h2 class="font-display-hero text-headline-xl sm:text-display-hero uppercase text-primary tracking-tight leading-none">
+        Tu negocio merece crecer en digital — <span class="text-secondary font-light">y nosotros sabemos cómo lograrlo</span>
+</h2>
+<p class="font-body-xl text-body-lg sm:text-body-xl text-on-surface-variant max-w-2xl">
+        Primera consulta gratis. Sin compromiso ni llamadas de ventas molestas. Te respondemos hoy mismo con un plan de acción concreto.
+      </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-space-md pt-space-md w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-surface-container-lowest font-label-lg text-label-lg uppercase tracking-wider px-space-xl py-4 hover:bg-secondary-fixed transition-colors font-bold shadow-[0_0_24px_rgba(255,255,255,0.25)]" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20quiero%20informaci%C3%B3n%20para%20mi%20negocio" rel="noopener noreferrer" target="_blank">
+          Escribir por WhatsApp
+        </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center bg-transparent border border-primary text-primary font-label-lg text-label-lg uppercase tracking-wider px-space-xl py-4 hover:bg-surface-container-high transition-colors font-bold" href="https://wa.me/528712111065?text=Hola%20STAR/CO,%20deseo%20solicitar%20una%20cotizaci%C3%B3n%20gratis" rel="noopener noreferrer" target="_blank">
+          Solicitar cotización gratis
+        </a>
+</div>
+<!-- Studio Direct Coordinates -->
+<div class="pt-space-xl border-t border-surface-container-high w-full flex flex-col sm:flex-row items-center justify-between text-outline font-label-sm text-label-sm uppercase tracking-widest gap-2">
+<span>Sede Central: Torreón, Coahuila, México</span>
+<a class="hover:text-primary transition-colors" href="tel:+528712111065">+52 871 211 1065</a>
+<span>STAR/CO Architectural Digital Studio</span>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-surface-container-high text-on-surface-variant"><div class="max-w-7xl mx-auto px-margin lg:px-margin-desktop pt-space-2xl pb-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter lg:gap-gutter-desktop"><div class="md:col-span-5 space-y-space-md"><a class="flex items-center tracking-tighter uppercase font-headline-md text-headline-md text-primary" data-path="inicio" href="#"><span class="font-bold">STAR</span><span class="text-secondary">/</span><span class="font-bold">CO</span></a><p class="font-label-md text-label-md uppercase tracking-widest text-outline">Web · IA · Reseñas Google · Menú Digital</p><div class="flex items-center gap-space-md pt-space-sm"><a class="font-label-sm text-label-sm uppercase tracking-widest text-secondary hover:text-primary transition-colors flex items-center gap-space-xs" href="https://wa.me/528712111065" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">chat</span>WhatsApp</a><a class="font-label-sm text-label-sm uppercase tracking-widest text-secondary hover:text-primary transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px]">photo_camera</span>Instagram</a><a class="font-label-sm text-label-sm uppercase tracking-widest text-secondary hover:text-primary transition-colors flex items-center gap-space-xs" href="#"><span class="material-symbols-outlined text-[16px]">share</span>Facebook</a></div></div><div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-gutter"><div class="space-y-space-sm"><h4 class="font-label-lg text-label-lg uppercase tracking-wider text-primary">Menú rápido</h4><ul class="space-y-space-xs font-body-md text-body-md"><li class="py-0.5"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="inicio" href="#">Inicio</a></li><li class="py-0.5"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="servicios" href="#">Servicios</a></li><li class="py-0.5"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="portafolio" href="#">Portafolio</a></li><li class="py-0.5"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="precios" href="#">Precios</a></li><li class="py-0.5"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="contacto" href="#">Contacto</a></li></ul></div><div class="space-y-space-sm"><h4 class="font-label-lg text-label-lg uppercase tracking-wider text-primary">Servicios</h4><ul class="space-y-space-xs font-body-md text-body-md"><li class="py-0.5"><span class="text-on-surface-variant">Diseño Web</span></li><li class="py-0.5"><span class="text-on-surface-variant">Automatización IA</span></li><li class="py-0.5"><span class="text-on-surface-variant">Reseñas Google</span></li><li class="py-0.5"><span class="text-on-surface-variant">Menú Digital</span></li></ul></div><div class="space-y-space-sm"><h4 class="font-label-lg text-label-lg uppercase tracking-wider text-primary">Contacto</h4><div class="space-y-space-xs font-body-md text-body-md text-on-surface-variant"><p class="text-on-surface-variant">Torreón, Coahuila</p><p><a class="hover:text-primary transition-colors" href="tel:+528712111065">+52 871 211 1065</a></p><p><a class="hover:text-primary transition-colors break-all" href="mailto:valcor.studiomx@gmail.com">valcor.studiomx@gmail.com</a></p></div></div></div></div><div class="mt-space-2xl pt-space-md border-t border-surface-container-high flex flex-col sm:flex-row items-center justify-between gap-space-sm text-center sm:text-left"><p class="font-label-sm text-label-sm uppercase tracking-widest text-outline">© 2025 STAR/CO · Todos los derechos reservados</p><div class="flex items-center gap-space-md font-label-sm text-label-sm uppercase tracking-widest text-outline"><span class="inline-block w-1.5 h-1.5 bg-surface-container-highest"></span><span>Architectural Digital Systems</span></div></div></div></footer><aside class="fixed bottom-6 right-6 z-50"><a aria-label="WhatsApp STAR/CO" class="relative group flex items-center justify-center w-14 h-14 bg-surface-container-high border border-outline hover:border-primary text-primary transition-all duration-300 shadow-[0_0_24px_-4px_rgba(232,232,232,0.12)]" href="https://wa.me/528712111065" rel="noopener noreferrer" target="_blank"><span class="absolute -inset-1 rounded-none border border-primary/20 animate-ping pointer-events-none"></span><svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg></a></aside><script>const btn=document.getElementById('mobile-menu-btn');const flyout=document.getElementById('mobile-flyout');if(btn&&flyout){btn.addEventListener('click',()=>{flyout.classList.toggle('hidden');});}</script></body></html>

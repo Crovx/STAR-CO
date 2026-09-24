@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STARCO - Experiencia 3D Interactiva</title>
+  <meta name="description" content="Experiencia visual 3D interactiva con Three.js, estrella animada de inicio, partículas cósmicas y elementos espaciales interactivos.">
+  
+  <!-- Google Fonts: Orbitron y Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome para Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas 3D de Three.js -->
+  <div id="webgl-container"></div>
+
+  <!-- Capa de Onda de Choque de Entrada -->
+  <div id="shockwave-overlay"></div>
+
+  <!-- Interfaz de Usuario Superpuesta (HUD) -->
+  <div class="ui-layer">
+    <!-- Barra de Navegación Superior -->
+    <header class="navbar">
+      <div class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-star"></i></span>
+        <span class="logo-text">STAR<span class="gradient-text">CO</span> 3D</span>
+      </div>
+      <div class="nav-controls">
+        <button id="btn-audio" class="hud-btn" title="Activar/Desactivar Sonido Cósmico">
+          <i class="fa-solid fa-volume-xmark" id="audio-icon"></i>
+          <span class="btn-label">Audio FX</span>
+        </button>
+        <button id="btn-replay" class="hud-btn" title="Repetir animación de entrada de la estrella">
+          <i class="fa-solid fa-rotate-right"></i>
+          <span class="btn-label">Replay Intro</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Contenido Hero Principal -->
+    <main class="hero-section">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        <span>EXPERIENCIA 3D EN TIEMPO REAL</span>
+      </div>
+      <h1 class="hero-title">
+        EXPLORA EL <span class="gradient-text-hero">UNIVERSO</span> DIGITAL
+      </h1>
+      <p class="hero-description">
+        Haz clic y arrastra para rotar la perspectiva. Interactúa con la <strong>Estrella Cósmica</strong> y los cuerpos celestes flotantes para liberar energía estelar.
+      </p>
+
+      <div class="action-buttons">
+        <button id="btn-supernova" class="btn-primary">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span>Supernova Burst</span>
+        </button>
+        <button id="btn-toggle-rings" class="btn-secondary">
+          <i class="fa-solid fa-circle-notch"></i>
+          <span>Alternar Anillos</span>
+        </button>
+      </div>
+    </main>
+
+    <!-- Panel de Control de Temas y Efectos (Sidebar/HUD inferior) -->
+    <aside class="hud-panel bottom-panel">
+      <div class="panel-header">
+        <span class="panel-title"><i class="fa-solid fa-palette"></i> TEMA DE ENERGÍA</span>
+      </div>
+      <div class="theme-selector">
+        <button class="theme-pill active" data-theme="gold" title="Supernova Gold">
+          <span class="color-dot gold"></span>
+          <span>Gold</span>
+        </button>
+        <button class="theme-pill" data-theme="cyan" title="Nebula Cyan">
+          <span class="color-dot cyan"></span>
+          <span>Cyan</span>
+        </button>
+        <button class="theme-pill" data-theme="violet" title="Cyber Violet">
+          <span class="color-dot violet"></span>
+          <span>Violet</span>
+        </button>
+        <button class="theme-pill" data-theme="crimson" title="Cosmic Crimson">
+          <span class="color-dot crimson"></span>
+          <span>Crimson</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Tarjetas de Información 3D Flotantes (Glassmorphism) -->
+    <div class="feature-cards-grid">
+      <div class="glass-card" id="card-star">
+        <div class="card-icon"><i class="fa-solid fa-sun"></i></div>
+        <div class="card-content">
+          <h3>Estrella Central</h3>
+          <p>Malla 3D poliédrica facetada con núcleo emissive dinámico y rotación giroscópica.</p>
+          <span class="card-tag">3D Interactivo</span>
+        </div>
+      </div>
+
+      <div class="glass-card" id="card-dust">
+        <div class="card-icon"><i class="fa-solid fa-atom"></i></div>
+        <div class="card-content">
+          <h3>Polvo Cósmico</h3>
+          <p>Más de 2,500 partículas estelares reactivas a la aceleración del cursor.</p>
+          <span class="card-tag">Física de Partículas</span>
+        </div>
+      </div>
+
+      <div class="glass-card" id="card-crystals">
+        <div class="card-icon"><i class="fa-solid fa-gem"></i></div>
+        <div class="card-content">
+          <h3>Cristales Flotantes</h3>
+          <p>Cuerpos geométricos orbitales con detección de clic (*Raycasting*) e impulsos de torsión.</p>
+          <span class="card-tag">Raycasting WebGL</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicador de Interacción Inferior -->
+    <footer class="footer-tips">
+      <div class="tip-item">
+        <i class="fa-solid fa-computer-mouse"></i> <span>Arrastra para rotar la cámara</span>
+      </div>
+      <div class="tip-item">
+        <i class="fa-solid fa-hand-pointer"></i> <span>Haz clic en los elementos 3D</span>
+      </div>
+      <div class="tip-item">
+        <i class="fa-solid fa-arrows-spin"></i> <span>Rueda del mouse para Zoom</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts: Three.js y Aplicación Modular -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/star.js"></script>
+  <script src="js/floatingElements.js"></script>
+  <script src="js/scene3d.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
