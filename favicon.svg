@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181818" />
+      <stop offset="100%" stop-color="#080808" />
+    </linearGradient>
+    <linearGradient id="starNorth" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#c6c6c6" />
+    </linearGradient>
+    <linearGradient id="starSouth" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#888888" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+    <linearGradient id="starEast" x1="100%" y1="50%" x2="0%" y2="50%">
+      <stop offset="0%" stop-color="#d4d4d4" />
+      <stop offset="100%" stop-color="#666666" />
+    </linearGradient>
+    <linearGradient id="starWest" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#999999" />
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#888888" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.5" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  <rect width="506" height="506" x="3" y="3" rx="109" fill="none" stroke="#2e2e2e" stroke-width="3" />
+
+  <!-- Outer Gyroscopic Halo Ring -->
+  <ellipse cx="256" cy="256" rx="195" ry="85" fill="none" stroke="url(#ringGrad)" stroke-width="5" transform="rotate(-30 256 256)" />
+  
+  <!-- Subtle Ambient Core Glow -->
+  <circle cx="256" cy="256" r="145" fill="url(#coreGlow)" />
+
+  <!-- 4-Point Faceted Geodesic Star -->
+  <!-- North Point: Left facet & Right facet -->
+  <polygon points="256,52 256,256 195,256" fill="url(#starWest)" opacity="0.95" />
+  <polygon points="256,52 317,256 256,256" fill="url(#starNorth)" />
+
+  <!-- South Point: Left facet & Right facet -->
+  <polygon points="256,460 195,256 256,256" fill="url(#starSouth)" opacity="0.85" />
+  <polygon points="256,460 256,256 317,256" fill="url(#starEast)" />
+
+  <!-- East Point: Top facet & Bottom facet -->
+  <polygon points="460,256 256,195 256,256" fill="url(#starNorth)" />
+  <polygon points="460,256 256,256 256,317" fill="url(#starEast)" opacity="0.9" />
+
+  <!-- West Point: Top facet & Bottom facet -->
+  <polygon points="52,256 256,256 256,195" fill="url(#starWest)" />
+  <polygon points="52,256 256,317 256,256" fill="url(#starSouth)" opacity="0.8" />
+
+  <!-- Diagonal Sub-Spikes -->
+  <polygon points="256,256 350,162 256,218" fill="#ffffff" opacity="0.8" />
+  <polygon points="256,256 350,162 294,256" fill="#a3a3a3" opacity="0.65" />
+
+  <polygon points="256,256 162,350 256,294" fill="#737373" opacity="0.65" />
+  <polygon points="256,256 162,350 218,256" fill="#d4d4d4" opacity="0.8" />
+
+  <polygon points="256,256 350,350 294,256" fill="#888888" opacity="0.65" />
+  <polygon points="256,256 350,350 256,294" fill="#555555" opacity="0.65" />
+
+  <polygon points="256,256 162,162 218,256" fill="#ffffff" opacity="0.85" />
+  <polygon points="256,256 162,162 256,218" fill="#cccccc" opacity="0.75" />
+
+  <!-- Center Diamond Crystal Core -->
+  <polygon points="256,220 292,256 256,292 220,256" fill="#ffffff" />
+  <circle cx="256" cy="256" r="7" fill="#111111" />
+</svg>
